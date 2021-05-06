@@ -158,7 +158,7 @@ int Vormelt() {
 		scr = GetDC(NULL);
 		hScreen = GetDC(NULL);
 
-
+		BitBlt(hDC, 0, 0, xs, ys, GetDC(NULL), 0, 0, SRCCOPY);
 		BitBlt(hDC, 1 + (INT)(((INT)rng() % 4) - 2), 1 + (INT)(((INT)rng() % 4) - 2), scRect.right + (INT)(((INT)rng() % 4) - 2), scRect.bottom + (INT)(((INT)rng() % 4) - 2), hDC, 1, 1, NOTSRCERASE);
 		Sleep(100);
 	}
